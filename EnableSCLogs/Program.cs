@@ -17,6 +17,7 @@ namespace EnableSCLogs
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new EnableSCLogs());
+            //Application.Run(new FormLogViewer());
         }
     }
 }

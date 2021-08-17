@@ -9,3 +9,13 @@ C:\Users\sgiu\source\repos\EnableSCLogs\EnableSCLogs\obj\Release\EnableSCLogs.ex
 C:\Users\sgiu\source\repos\EnableSCLogs\EnableSCLogs\obj\Release\EnableSCLogs.pdb
 C:\Users\sgiu\source\repos\EnableSCLogs\EnableSCLogs\obj\Release\EnableSCLogs.csprojAssemblyReference.cache
 C:\Users\sgiu\source\repos\EnableSCLogs\EnableSCLogs\obj\Release\EnableSCLogs.FormLogViewer.resources
+C:\Users\sgiu\source\repos\giuliettiseba\EnableSCLogsV2\EnableSCLogs\obj\Release\EnableSCLogs.EnableSCLogs.resources
+C:\Users\sgiu\source\repos\giuliettiseba\EnableSCLogsV2\EnableSCLogs\obj\Release\EnableSCLogs.FormLogViewer.resources
+C:\Users\sgiu\source\repos\giuliettiseba\EnableSCLogsV2\EnableSCLogs\obj\Release\EnableSCLogs.Properties.Resources.resources
+C:\Users\sgiu\source\repos\giuliettiseba\EnableSCLogsV2\EnableSCLogs\obj\Release\EnableSCLogs.csproj.GenerateResource.cache
+C:\Users\sgiu\source\repos\giuliettiseba\EnableSCLogsV2\EnableSCLogs\obj\Release\EnableSCLogs.csproj.CoreCompileInputs.cache
+C:\Users\sgiu\source\repos\giuliettiseba\EnableSCLogsV2\EnableSCLogs\obj\Release\EnableSCLogs.exe
+C:\Users\sgiu\source\repos\giuliettiseba\EnableSCLogsV2\EnableSCLogs\obj\Release\EnableSCLogs.pdb
+C:\Users\sgiu\source\repos\giuliettiseba\EnableSCLogsV2\EnableSCLogs\bin\Release\EnableSCLogs.exe.config
+C:\Users\sgiu\source\repos\giuliettiseba\EnableSCLogsV2\EnableSCLogs\bin\Release\EnableSCLogs.exe
+C:\Users\sgiu\source\repos\giuliettiseba\EnableSCLogsV2\EnableSCLogs\bin\Release\EnableSCLogs.pdb

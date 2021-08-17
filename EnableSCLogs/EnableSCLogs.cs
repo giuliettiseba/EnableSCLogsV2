@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Configuration;
+using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.IO.Compression;
 using System.Windows.Forms;
@@ -9,6 +11,15 @@ namespace EnableSCLogs
 {
     public partial class EnableSCLogs : Form
     {
+        // Join the dark theme 
+        readonly Color TEXTBACKCOLOR = System.Drawing.ColorTranslator.FromHtml("#252526");
+        readonly Color BACKCOLOR = System.Drawing.ColorTranslator.FromHtml("#2D2D30");
+        readonly Color INFOCOLOR = System.Drawing.ColorTranslator.FromHtml("#1E7AD4");
+        readonly Color MESSAGECOLOR = System.Drawing.ColorTranslator.FromHtml("#86A95A");
+        readonly Color DEBUGCOLOR = System.Drawing.ColorTranslator.FromHtml("#DCDCAA");
+        readonly Color ERRORCOLOR = System.Drawing.ColorTranslator.FromHtml("#B0572C");
+
+
         private XmlNode nodeLoggingenabled;
         private XmlDocument doc;
         static readonly String appDataFile = (Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Milestone\Smart Client\ApplicationSettings.xml");
@@ -24,7 +35,6 @@ namespace EnableSCLogs
             ReadXML();
             ReadConfigFile();
         }
-
 
         private void ReadConfigFile()
         {
@@ -47,7 +57,6 @@ namespace EnableSCLogs
 
         private void ReadXML()
         {
-
             try
             {
                 doc.Load(appDataFile);
@@ -59,7 +68,6 @@ namespace EnableSCLogs
                 MessageBox.Show("Cannot find the configuration file, this version will only work with 2020r3 or newer");
                 System.Environment.Exit(1);
             }
-
         }
 
         private void buttonCollectLogs_Click(object sender, EventArgs e)
@@ -93,18 +101,22 @@ namespace EnableSCLogs
             }
         }
 
-
-        private void chechBoxLogEnabled_CheckedChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void buttonLauchSC_Click(object sender, EventArgs e)
         {
-
             try
             {
-                System.Diagnostics.Process.Start(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + @"\Milestone\XProtect Smart Client\Client.exe");
+
+                Process[] processes = Process.GetProcessesByName("Client");
+
+                foreach (Process process in processes)
+                {
+                    // Close process by sending a close message to its main window.
+                    process.CloseMainWindow();
+                    // Free resources associated with process.
+                    process.Close();
+                }
+
+                Process.Start(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) + @"\Milestone\XProtect Smart Client\Client.exe");
 
             }
             catch (Exception em)
@@ -113,22 +125,14 @@ namespace EnableSCLogs
             }
         }
 
-        private void comboBoxHA_SelectedIndexChanged(object sender, EventArgs e)
-        {
-   
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-
             string subPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Milestone\Smart Client";
-
             try
             {
-              //  Directory.CreateDirectory(subPath);
-                Directory.Delete(subPath,true);
-
-                       }
+                //  Directory.CreateDirectory(subPath);
+                Directory.Delete(subPath, true);
+            }
             catch (Exception e1)
             {
                 Console.WriteLine("The process failed: {0}", e1.Message);
@@ -137,8 +141,8 @@ namespace EnableSCLogs
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormLogViewer f2 = new FormLogViewer();
-            f2.ShowDialog(); // Shows Form2
+            FormLogViewer f2 = new FormLogViewer(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + @"\Milestone\XProtect Smart Client\ClientLog.txt");
+            f2.Show(); // Shows Form2
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -167,9 +171,6 @@ namespace EnableSCLogs
             {
                 MessageBox.Show(em.Message);
             }
-
-
-      
         }
     }
 
