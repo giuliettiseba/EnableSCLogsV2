@@ -8,3 +8,4 @@ C:\Users\sgiu\source\repos\giuliettiseba\EnableSCLogsV2\EnableSCLogs\bin\Release
 C:\Users\sgiu\source\repos\giuliettiseba\EnableSCLogsV2\EnableSCLogs\bin\Release\EnableSCLogsV2.pdb
 C:\Users\sgiu\source\repos\giuliettiseba\EnableSCLogsV2\EnableSCLogs\obj\Release\EnableSCLogsV2.exe
 C:\Users\sgiu\source\repos\giuliettiseba\EnableSCLogsV2\EnableSCLogs\obj\Release\EnableSCLogsV2.pdb
+C:\Users\sgiu\Source\Repos\giuliettiseba\EnableSCLogsV2\EnableSCLogs\obj\Release\EnableSCLogsV2.csproj.AssemblyReference.cache

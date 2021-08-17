@@ -90,7 +90,7 @@
             this.buttonLauchSC.Name = "buttonLauchSC";
             this.buttonLauchSC.Size = new System.Drawing.Size(239, 30);
             this.buttonLauchSC.TabIndex = 1;
-            this.buttonLauchSC.Text = "Lauch Smart Client";
+            this.buttonLauchSC.Text = "Launch Smart Client";
             this.buttonLauchSC.UseVisualStyleBackColor = false;
             this.buttonLauchSC.Click += new System.EventHandler(this.buttonLauchSC_Click);
             // 
